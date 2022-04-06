@@ -74,7 +74,7 @@ namespace GoProOrdering
 
         private string GetFirstChapterFileName(string file)
         {
-            string key = file.Remove(3, 2);
+            string key = file.Remove(2, 2);
             key = key.Insert(2, "01");
             return key;
         }
@@ -130,7 +130,27 @@ namespace GoProOrdering
                 Text_FirstNumber.Text = (i - 1).ToString();
             }
         }
+        private void Text_ExtraPadding_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
 
+        private void Button_ExtraPadding_Up_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (int.TryParse(Text_ExtraPadding.Text, out int i))
+            {
+                Text_ExtraPadding.Text = (i + 1).ToString();
+            }
+        }
+
+        private void Button_ExtraPadding_Dn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (int.TryParse(Text_ExtraPadding.Text, out int i))
+            {
+                Text_ExtraPadding.Text = (i - 1).ToString();
+            }
+        }
         private void Button_Start_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             _resultFiles.Clear();
@@ -196,7 +216,13 @@ namespace GoProOrdering
                 }
             }
 
-            int padding = baseFiles.Length.ToString().Length;
+            int extraPadding;
+            if (!int.TryParse(Text_ExtraPadding.Text, out extraPadding))
+            {
+                extraPadding = 0;
+            }
+
+            int padding = baseFiles.Length.ToString().Length + extraPadding;
 
             // Get all files without extensions (and without duplicates)
             List<string> files = new List<string>();
@@ -236,6 +262,10 @@ namespace GoProOrdering
             {
                 // All additional chapters
                 int chapter = GetChapter(file);
+                if (chapter == 10)
+                {
+                    Debug.WriteLine("10");
+                }
                 if (chapter > 1)
                 {
                     // Get matching chapter and add to mapping
