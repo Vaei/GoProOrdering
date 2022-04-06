@@ -12,7 +12,7 @@ Does not support looping video - single video and chaptered video only.
 
 There should be nothing except for your GoPro files in the directory.
 
-There is no undo, so if you have a lot of files and you don't want to possibility of error, back them up first.
+There is no undo, so if you have a lot of files and you don't want the possibility of error, back them up first.
 
 # Example Usage
 This example only shows real-world usage because it is a very simply application. Normally all you need to do is set the directory and click the button.
