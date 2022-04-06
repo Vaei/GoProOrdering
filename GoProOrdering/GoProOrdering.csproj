@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5847C6E6-398E-4FA0-99FA-B255D80C559F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GoProOrdering</RootNamespace>
+    <AssemblyName>GoProOrdering</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Confirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Confirmation.xaml.cs">
+      <DependentUpon>Confirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ookii.Dialogs.Wpf\AnimationResource.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ButtonType.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ComCtlv6ActivationContext.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\DownlevelTextMode.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ExpandButtonClickedEventArgs.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\GlobalSuppressions.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\HyperlinkClickedEventArgs.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\ComDlgResources.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\COMGuids.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\ErrorHelper.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\IProgressDialog.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\ShellComInterfaces.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\ShellWrapperDefinitions.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\Interop\Win32Resources.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\NativeMethods.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ProgressBarState.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ProgressBarStyle.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ProgressDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ookii.Dialogs.Wpf\ProgressDialog.designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ookii.Dialogs.Wpf\Properties\Resources.Designer.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\SafeHandles.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\ShellAnimation.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\TimerEventArgs.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\VistaFileDialog.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\VistaFileDialogEvents.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\VistaFolderBrowserDialog.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\VistaOpenFileDialog.cs" />
+    <Compile Include="Ookii.Dialogs.Wpf\VistaSaveFileDialog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ookii.Dialogs.Wpf\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ookii.Dialogs.Wpf\Properties\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Ookii.Dialogs.Wpf\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Ookii.Dialogs.Wpf\obj\Debug\Ookii.Dialogs.Wpf.csprojAssemblyReference.cache" />
+    <None Include="Ookii.Dialogs.Wpf\Ookii.Dialogs.Wpf.csproj" />
+    <None Include="Ookii.Dialogs.Wpf\ookii.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ookii.Dialogs.Wpf\CredentialDialog.bmp" />
+    <Resource Include="Ookii.Dialogs.Wpf\CustomDictionary.xml" />
+    <Resource Include="Icon.ico" />
+    <Content Include="Ookii.Dialogs.Wpf\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Resource Include="Ookii.Dialogs.Wpf\ProgressDialog.bmp" />
+    <Resource Include="Ookii.Dialogs.Wpf\TaskDialog.bmp" />
+    <Resource Include="Ookii.Dialogs.Wpf\VistaFolderBrowserDialog.bmp" />
+    <Resource Include="Ookii.Dialogs.Wpf\VistaOpenFileDialog.bmp" />
+    <Resource Include="Ookii.Dialogs.Wpf\VistaSaveFileDialog.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
