@@ -34,3 +34,11 @@ It will show a list of all the changes it will make:
 When you click accept, it will complete the renaming:
 
 ![](https://github.com/Vaei/GoProOrdering/blob/master/GitPage/preview_003.png)
+
+# Changelog
+
+## 1.0.0.1
+Correcting the list of supported GoPro Hero models to include 6 and 7
+
+## 1.0.0.0
+Initial Release
