@@ -16,9 +16,9 @@
                 <TextBlock></TextBlock>
                 <TextBlock Text="Use at your own risk. Back up your files first" Foreground="OrangeRed" HorizontalAlignment="Center"></TextBlock>
                 <TextBlock></TextBlock>
-                <TextBlock Text="Version 1.0.0.0-beta" Foreground="Gray" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Version 1.0.0.1-beta" Foreground="Gray" HorizontalAlignment="Center"></TextBlock>
                 <TextBlock></TextBlock>
-                <TextBlock Text="Looping video not supported. GoPro Hero 10/9/8 only." Foreground="White" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Looping video not supported. GoPro Hero 10/9/8/7/6 only." Foreground="White" HorizontalAlignment="Center"></TextBlock>
                 <TextBlock></TextBlock>
                 <TextBlock Text="Only GoPro files should be in the directory" Foreground="White" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
